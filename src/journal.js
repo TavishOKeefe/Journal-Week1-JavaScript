@@ -14,25 +14,23 @@
 
   Entry.prototype.vowel = function(){
     var vowels = [];
-    var result = vowels.length;
     var newEntry = this.entry.split("");
-    console.log(newEntry);
-    newEntry.forEach(function(element) {
-      // if ((element === "a") || (element === "e") || (element === "i") || (element === "o") || (element === "u")) {
-        vowels.push(element);
-      // } else {
-      //   return "There are no vowels in your entry.";
-      // }
-    })
-    return result;
+    for ( var i = 0; i < newEntry.length; i++) {
+      if ((newEntry[i] === "a") || (newEntry[i] === "e") || (newEntry[i] === "i") || (newEntry[i] === "o") || (newEntry[i] === "u")) {
+        vowels.push(newEntry[i]);
+      }
+    }
+    return vowels.length;
   }
 
   Entry.prototype.consonant = function(){
     var consonants = [];
-    for ( var i = 1; i <= this.entry.toLowerCase(); i++ ){
-      if (i !== "a" || i !== "e" || i !== "i" || i !== "o" || i !== "u"){
-        consonants.push(i)
+    var thisEntry = this.entry.split("");
+    for ( var i = 0; i < thisEntry.length; i++) {
+      if ((thisEntry[i] !== "a") && (thisEntry[i] !== "e") && (thisEntry[i] !== "i") && (thisEntry[i] !== "o") && (thisEntry[i] !== "u") && (thisEntry[i] !== " ")) {
+        consonants.push(thisEntry[i]);
       }
     }
+    console.log(consonants);
     return consonants.length;
   }

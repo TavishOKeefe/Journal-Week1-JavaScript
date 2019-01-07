@@ -10,7 +10,7 @@ $(document).ready(function() {
     var output = new Entry(inputTitle, inputEntry);
 
 
-    $('#journal-entries').append("<li>" + output.title + ": " + output.entry + ". " + output.vowel() + "</li>");
+    $('#journal-entries').append("<li>" + output.title + ": " + output.entry + ". " + output.consonant() + "</li>");
 
     // $('#journal-entries').text(output.vowel);
 
