@@ -2,9 +2,6 @@
   export function Entry(title, entry) {
     this.title = title,
     this.entry = entry
-    // this.words = 0,
-    // this.vowels = 0
-
   }
 
   Entry.prototype.wordCount = function(){
@@ -31,6 +28,5 @@
         consonants.push(thisEntry[i]);
       }
     }
-    console.log(consonants);
     return consonants.length;
   }

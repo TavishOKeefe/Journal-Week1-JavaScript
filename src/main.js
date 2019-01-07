@@ -1,4 +1,5 @@
 import { Entry } from './journal';
+import './styles.css';
 
 $(document).ready(function() {
   $('#journal-form').submit(function(event) {
@@ -10,9 +11,11 @@ $(document).ready(function() {
     var output = new Entry(inputTitle, inputEntry);
 
 
-    $('#journal-entries').append("<li>" + output.title + ": " + output.entry + ". " + output.consonant() + "</li>");
+    $('#journal-entries').append("<li>" + output.title + ": " + output.entry + "</li>");
 
-    // $('#journal-entries').text(output.vowel);
+    $('#words-entries').text(output.wordCount());
+    $('#vowels-entries').text(output.vowel());
+    $('#consonants-entries').text(output.consonant());
 
   })
 })
